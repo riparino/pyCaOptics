@@ -88,6 +88,24 @@ The script includes detailed error handling to assist in troubleshooting:
 - Key Errors: The script will log and skip any policies missing expected fields.
 - General Exceptions: Any unexpected issues are logged with a descriptive message to aid in debugging.
 
+## Installation Using `setup.py`
+If you prefer to install the project using `setup.py`, follow these steps:
+1. Ensure you are in the root directory where `setup.py` is located:
+   ```sh
+   cd pyCaOptics
+   ```
+2. Install the package using pip:
+   ```sh
+   pip install .
+   ```
+   This command will install the pyCaOptics package and its dependencies. After installation, you can run the scripts directly if they are defined as console scripts in the `setup.py`.
+3. Run the Scripts:
+    ```sh
+    pyCaOptics-app <tenant_id> <client_id>
+    pyCaOptics-usermode <tenant_id>
+    ```
+    Otherwise, you can continue to run the scripts as described in the [Usage](#usage) section.
+
 ## References
 - Microsoft Graph API Documentation: [Conditional Access policies API](https://docs.microsoft.com/en-us/graph/api/conditionalaccessroot-list-policies?view=graph-rest-1.0&tabs=http)
 - Original caOptics Tool: [caOptics on GitHub](https://github.com/jsa2/caOptics)
