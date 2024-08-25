@@ -115,5 +115,5 @@ If you prefer to install the project using `setup.py`, follow these steps:
 This project is inspired by the original jsa2/caOptics tool developed by jsa2. Special thanks to the original contributors for their work, which laid the foundation for this Python-based implementation.
 
 ## To-Do
-- Implement Permutation Checks: Extend your analysis to consider how different combinations of users, groups, roles, applications, and conditions interact across multiple policies.
+- Implement Permutation Checks: Extend analysis to consider how different combinations of users, groups, roles, applications, and conditions interact across multiple policies.
 - Handle Edge Cases: Introduce logic to manage and detect more nuanced gaps that could arise from complex CA configurations, such as nested group memberships or overlapping policies.
