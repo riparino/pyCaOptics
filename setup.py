@@ -14,6 +14,7 @@ setup(
         'console_scripts': [
             'pyCaOptics-app=pyCaOptics_app:main',
             'pyCaOptics-usermode=pyCaOptics_usermode:main',
+            'pyCaOptics-app-iter=pyCaOptics_app_iter:main'
         ],
     },
     include_package_data=True,
