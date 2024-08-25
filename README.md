@@ -74,6 +74,8 @@ To run the script using interactive browser-based authentication:
    ```
 This mode will open a browser window for you to sign in with your Azure AD account.
 
+Bear in mind that you will likely require at least Security Reader for this to work as your user.
+
 ## Output
 The script will perform the following actions:
 
