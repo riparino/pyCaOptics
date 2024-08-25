@@ -110,7 +110,7 @@ If you prefer to install the project using `setup.py`, follow these steps:
 - Original caOptics Tool: [caOptics on GitHub](https://github.com/jsa2/caOptics)
 
 ## Acknowledgements
-This project is inspired by the original caOptics tool developed by jsa2. Special thanks to the original contributors for their work, which laid the foundation for this Python-based implementation.
+This project is inspired by the original jsa2/caOptics tool developed by jsa2. Special thanks to the original contributors for their work, which laid the foundation for this Python-based implementation.
 
 ## To-Do
 - Implement Permutation Checks: Extend your analysis to consider how different combinations of users, groups, roles, applications, and conditions interact across multiple policies.
