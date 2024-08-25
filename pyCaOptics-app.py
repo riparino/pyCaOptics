@@ -24,7 +24,7 @@ def main(tenant_id, client_id):
         }
 
         data = fetch_data(headers, endpoints)
-        analysis_results = ca_optics_like_analysis(data['policies'], data['users'], data['groups'], data['applications'])
+        analysis_results = analysis(data['policies'], data['users'], data['groups'], data['applications'])
         df_analysis = pd.DataFrame(analysis_results)
         save_results(df_analysis)
 
@@ -64,7 +64,7 @@ def fetch_paginated_data(url, headers):
         print(f"Error fetching data from {url}: {e}")
         sys.exit(1)
 
-def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
+def analysis(policies, all_users, all_groups, all_applications):
     analysis_results = []
     all_user_ids = {user.get('id') for user in all_users if user.get('id')}
     all_group_ids = {group.get('id') for group in all_groups if group.get('id')}
@@ -85,7 +85,6 @@ def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
             applications_included = set(policy.get('conditions', {}).get('applications', {}).get('includeApplications', []))
             applications_excluded = set(policy.get('conditions', {}).get('applications', {}).get('excludeApplications', []))
             
-            # Handle NoneType for grantControls
             grant_controls = policy.get('grantControls') or {}
             built_in_controls = grant_controls.get('builtInControls', [])
 
@@ -149,10 +148,10 @@ def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
 
 def save_results(df_analysis):
     try:
-        output_filename = 'ca_optics_analysis_results.csv'
+        output_filename = 'analysis_results.csv'
         if os.path.exists(output_filename):
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_filename = f'ca_optics_analysis_results_{timestamp}.csv'
+            output_filename = f'analysis_results_{timestamp}.csv'
 
         df_analysis.to_csv(output_filename, index=False)
         print(f"Analysis complete. Results saved to '{output_filename}'.")
@@ -162,7 +161,7 @@ def save_results(df_analysis):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python caOptics-python.py <tenant_id> <client_id>")
+        print("Usage: python pyCaOptics-python.py <tenant_id> <client_id>")
         sys.exit(1)
 
     tenant_id = sys.argv[1]
