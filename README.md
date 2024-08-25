@@ -3,7 +3,6 @@
 **pyCaOptics** is a Python-based script designed to analyze Conditional Access policies in Azure Active Directory. It offers functionality similar to the original `caOptics` tool but is implemented in Python for ease of use and integration in various environments. This script enables users to authenticate via an Azure App Registration or interactively, retrieve Conditional Access policies, and perform an analysis to identify potential gaps or issues within the policies.
 
 ## Table of Contents
-
 - [Overview](#overview)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
@@ -17,7 +16,6 @@
 - [Acknowledgements](#acknowledgements)
 
 ## Overview
-
 pyCaOptics is a tool to assist security teams in reviewing and auditing Conditional Access policies in Azure Active Directory (AAD). By automating the retrieval and analysis of these policies, the script helps identify gaps, such as users or applications that might not be covered by the policies or conflicts between policies. 
 
 The project was inspired by the original `caOptics` tool and re-implemented in Python to allow broader usage across different environments without needing to rely on Node.js.
