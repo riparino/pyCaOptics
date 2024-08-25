@@ -98,7 +98,7 @@ config.json
 # Ignore setup files
 *.egg-info/
 *.egg
-setup.py
+# setup.py
 
 # Ignore backup and temporary files
 *.bak
