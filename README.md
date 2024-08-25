@@ -62,7 +62,7 @@ Before using pyCaOptics, ensure you have the following:
 ### Using the Script with App Registration
 To run the script using an Azure App Registration, use the following command:
    ```sh
-   python pyCaOptics-app.py <tenant_id> <client_id>
+   python pyCaOptics_app.py <tenant_id> <client_id>
    ```
 - <tenant_id>: The Azure Active Directory tenant ID.
 - <client_id>: The client ID of your Azure App Registration.
@@ -70,7 +70,7 @@ To run the script using an Azure App Registration, use the following command:
 ### Using the Script with Interactive Authentication
 To run the script using interactive browser-based authentication:
    ```sh
-   python pyCaOptics-usermode.py <tenant_id>
+   python pyCaOptics_usermode.py <tenant_id>
    ```
 This mode will open a browser window for you to sign in with your Azure AD account.
 
