@@ -57,7 +57,8 @@ Before using pyCaOptics, ensure you have the following:
         - Users.Read.All
         - Groups.Read.All
         - Policy.Read.All
-    - Add http://localhost:5000 as a redirect URI under "Mobile and desktop applications".
+    - Add http://localhost:8400 as a redirect URI under "Mobile and desktop applications".
+    - Enable Access tokens for Implicit grant and hybrid flows.
 
 ## Usage
 ### Using the Script with App Registration
