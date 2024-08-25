@@ -132,10 +132,13 @@ def analysis(policies, all_users, all_groups, all_applications):
 
 def save_results(df_analysis):
     try:
-        output_filename = 'analysis_results.csv'
+        output_dir = os.path.join(os.path.dirname(__file__), '..', 'output')
+        os.makedirs(output_dir, exist_ok=True)
+        
+        output_filename = os.path.join(output_dir, 'analysis_results.csv')
         if os.path.exists(output_filename):
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_filename = f'analysis_results_{timestamp}.csv'
+            output_filename = os.path.join(output_dir, f'analysis_results_{timestamp}.csv')
 
         df_analysis.to_csv(output_filename, index=False)
         print(f"Analysis complete. Results saved to '{output_filename}'.")
