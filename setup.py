@@ -6,7 +6,7 @@ setup(
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
-        'azure-identity==1.10.0',
+        'azure-identity==1.16.1',
         'requests==2.31.0',
         'pandas==2.0.3',
     ],
