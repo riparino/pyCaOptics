@@ -21,7 +21,7 @@ setup(
     description='A tool to analyze Azure Conditional Access policies, inspired by caOptics.',
     author='Riparino',
     author_email='riparino618@outlook.com',
-    url='https://github.com/your-repo/pyCaOptics',
+    url='https://github.com/riparino/pyCaOptics',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
