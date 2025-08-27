@@ -7,7 +7,7 @@ setup(
     package_dir={'': 'src'},
     install_requires=[
         'azure-identity==1.16.1',
-        'requests==2.32.2',
+        'requests==2.32.4',
         'pandas==2.0.3',
     ],
     entry_points={
