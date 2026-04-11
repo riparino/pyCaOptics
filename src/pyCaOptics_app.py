@@ -192,10 +192,10 @@ def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
                 gaps.append("No applications included; policy may not apply to any application.")
 
             # Overlap between inclusions and exclusions
-            overlapping_users = users_included & users_excluded - {'All', 'GuestsOrExternalUsers', 'None'}
+            overlapping_users = (users_included & users_excluded) - {'All', 'GuestsOrExternalUsers', 'None'}
             if overlapping_users:
                 gaps.append(f"Users appear in both inclusions and exclusions: {overlapping_users}")
-            overlapping_apps = applications_included & applications_excluded - {'All', 'None', 'Office365'}
+            overlapping_apps = (applications_included & applications_excluded) - {'All', 'None', 'Office365'}
             if overlapping_apps:
                 gaps.append(f"Applications appear in both inclusions and exclusions: {overlapping_apps}")
 
