@@ -9,6 +9,7 @@ setup(
         'azure-identity==1.16.1',
         'requests==2.32.2',
         'pandas==2.0.3',
+        'pyyaml>=6.0',
     ],
     entry_points={
         'console_scripts': [
