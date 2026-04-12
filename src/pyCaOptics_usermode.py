@@ -136,7 +136,7 @@ def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
             conditions = policy.get('conditions')
             if not conditions:
                 analysis_results.append({
-                    'Policy Name': 'Unnamed Policy',
+                    'Policy Name': policy.get('displayName', 'Unnamed Policy'),
                     'State': state,
                     'Gaps Identified': ['Policy is missing a conditions block.']
                 })
@@ -150,7 +150,6 @@ def ca_optics_like_analysis(policies, all_users, all_groups, all_applications):
             applications_excluded = set(conditions.get('applications', {}).get('excludeApplications', []))
 
             grant_controls = policy.get('grantControls') or {}
-            built_in_controls = grant_controls.get('builtInControls', [])
 
             user_risk_levels = conditions.get('userRiskLevels', [])
             sign_in_risk_levels = conditions.get('signInRiskLevels', [])

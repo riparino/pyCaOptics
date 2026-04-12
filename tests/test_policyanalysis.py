@@ -32,7 +32,8 @@ class TestPolicyAnalysis(unittest.TestCase):
         applications = [{'appId': 'App1'}]
 
         result = ca_optics_like_analysis(policies, users, groups, applications)
-        self.assertIn('Unnamed Policy', str(result))
+        self.assertIn('Incomplete Policy', str(result))
+        self.assertIn('Policy is missing a conditions block.', str(result))
 
 if __name__ == '__main__':
     unittest.main()
