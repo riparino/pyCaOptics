@@ -1,6 +1,11 @@
 # C extensions
 *.so
 
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
 # Distribution / packaging
 .Python
 build/
